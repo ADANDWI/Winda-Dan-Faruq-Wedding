@@ -66,12 +66,13 @@
         var rootElement = document.documentElement;
         window.onscroll = function() {};
         rootElement.style.scrollBehavior = 'smooth';
-        // playAudio(); // Jika diperlukan
+        playAudio(); 
         smoothScroll('#hero1', 1000); // Ganti '#hero' dengan ID bagian undangan yang ingin digulirkan
     }
 </script>
 
-  <audio loop="true" src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" id="audio"></audio>
+  <audio loop="true" controls autoplay src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" id="audio"></audio>
+  
   
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
@@ -389,44 +390,6 @@
       <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
     </ul>
   </footer>
-  
-
-  
-  <script>
-		document.addEventListener("DOMContentLoaded", function (event) {
-			let audio = document.getElementById("audio");
-			let button = document.getElementById('mute');
-			if (+localStorage.getItem('mute')) {
-				audio.muted = true;
-				button.innerHTML = '<i color="#000" class="fa fa-volume-off my-float"></i>';
-				audio.pause()
-			} else {
-				audio.volume = 0.9;
-				audio.play()
-			}
-		})
-
-		function mute() {
-			let audio = document.getElementById('audio');
-			let button = document.getElementById('mute');
-			let isMute = +localStorage.getItem('mute');
-			if (!isMute) {
-				audio.muted = true;
-				audio.pause()
-				button.innerHTML = '<i color="#000" class="fa fa-volume-off my-float"></i>';
-				localStorage.setItem('mute', 1);
-			} else {
-				audio.muted = false;
-				audio.volume = 0.9;
-				audio.play()
-				button.innerHTML = '<i color="#fff" class="fa fa-volume-up my-float"></i>';
-				localStorage.setItem('mute', 0);
-
-			}
-		}
-	</script>
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -466,57 +429,7 @@
 
   </script>
 
-  <script>
-    const rootElement = document.querySelector(":root");
-    const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
-    const audioIcon = document.querySelector('.audio-icon-wrapper i');
-    const song = document.querySelector('#song');
-    let isPlaying = false;
-
-    function enableScroll() {
-      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-      window.onscroll = function () {
-        window.scrollTo(scrollTop, scrollLeft);
-      }
-
-      rootElement.style.scrollBehavior = 'auto';
-    }
-
-    function enableScroll() {
-      window.onscroll = function () { }
-      rootElement.style.scrollBehavior = 'smooth';
-      // localStorage.setItem('opened', 'true');
-      playAudio();
-    }
-
-    function playAudio() {
-      song.volume = 0.1;
-      audioIconWrapper.style.display = 'flex';
-      song.play();
-      isPlaying = true;
-    }
-
-    audioIconWrapper.onclick = function () {
-      if (isPlaying) {
-        song.pause();
-        audioIcon.classList.remove('bi-disc');
-        audioIcon.classList.add('bi-pause-circle');
-      } else {
-        song.play();
-        audioIcon.classList.add('bi-disc');
-        audioIcon.classList.remove('bi-pause-circle');
-      }
-
-      isPlaying = !isPlaying;
-    }
-
-    // if (!localStorage.getItem('opened')) {
-    //   disableScroll();
-    // }
-    disableScroll();
-  </script>
+  
   <script>
     window.addEventListener("load", function () {
       const form = document.getElementById('my-form');
