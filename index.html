@@ -66,15 +66,18 @@
         var rootElement = document.documentElement;
         window.onscroll = function() {};
         rootElement.style.scrollBehavior = 'smooth';
-        playAudio(); 
         smoothScroll('#hero1', 1000); // Ganti '#hero' dengan ID bagian undangan yang ingin digulirkan
+        playAudio(); 
+        $('#audioFrenata').on('ended', function() {
+        manageImageObjectsLevel();
+    }).get(0).play();
+    
     }
 </script>
 
-<audio loop="true" autoplay src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" id="audio"></audio>
-
-  
-  
+<audio loop="true" autoplay id="audio">
+  <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="mp3">
+</audio> 
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
     </main>
