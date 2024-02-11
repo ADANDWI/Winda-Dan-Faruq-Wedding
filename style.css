@@ -800,6 +800,18 @@ footer {
     right: auto;
   }
 }
+/* CSS untuk menyembunyikan tombol pada audio player saat lebar layar kurang dari 768px */
+@media (max-width: 767px) {
+  audio::-webkit-media-controls {
+    display: none !important;
+  }
+  audio::-webkit-media-controls-panel {
+    display: none !important;
+  }
+  audio::-webkit-media-controls-start-playback-button {
+    display: none !important;
+  }
+}
 
 /* tablet */
 @media (max-width: 768px) {
