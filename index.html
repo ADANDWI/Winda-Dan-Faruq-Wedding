@@ -71,15 +71,15 @@
     }
 </script>
 
-<audio autoplay loop id="audioFrenata"  controls="controls">
-  <source src="audio/bergetar aku_.ogg" type="audio/ogg">
+<audio autoplay id="my_audio" loop="loop">
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
-</audio>
-<script>$('#audioFrenata').on('ended', function() {
-  manageImageObjectsLevel();
-}).get(0).play();
-</script>
-
+  Your browser does not support the <code>audio</code> element.
+  <!-- button play audio -->
+  <div class="float-container">
+    <input type="checkbox" class="playpause-chk-icon"  id="chkbx2" onchange="toggleAudio(this)">
+    <label for="chkbx2"></label>
+  </div>
+</audio> 
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
     </main>

@@ -721,23 +721,17 @@ footer {
   color: #007bff;
 }
 
-.audio-icon-wrapper {
-  width: 4rem;
-  height: 4rem;
-  font-size: 4rem;
-  position: fixed;
-  bottom: 2.5rem;
-  right: 2rem;
-  cursor: pointer;
-  color: white;
-  opacity: 0.5;
-  mix-blend-mode: difference;
-  animation: rotating 4s linear infinite;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
+.audio {
+  padding: 20px;
   align-items: center;
-  line-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+}
+audio {
+  width: 250px;
+  height: 30px;
 }
 
 @keyframes rotating {
@@ -798,18 +792,6 @@ footer {
     border-right-width: 14px;
     left: -13px;
     right: auto;
-  }
-}
-/* CSS untuk menyembunyikan tombol pada audio player saat lebar layar kurang dari 768px */
-@media (max-width: 767px) {
-  audio::-webkit-media-controls {
-    display: none !important;
-  }
-  audio::-webkit-media-controls-panel {
-    display: none !important;
-  }
-  audio::-webkit-media-controls-start-playback-button {
-    display: none !important;
   }
 }
 
