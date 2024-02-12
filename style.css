@@ -31,7 +31,7 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: slideshow 30s infinite; /* Atur kecepatan dan looping slideshow di sini */
+  animation: slideshow 75s infinite; /* Atur kecepatan dan looping slideshow di sini */
 }
 
 @keyframes slideshow {
