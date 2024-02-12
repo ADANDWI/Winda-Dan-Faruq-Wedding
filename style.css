@@ -36,7 +36,7 @@ body {
 
 @keyframes slideshow {
   0% {
-    background-image: url('img/BS (323 of 508).jpg');
+    background-image: url('img/BS (323 of 508).jpg') ;
   }
   25% {
     background-image: url('img/BS (442 of 508).jpg');
