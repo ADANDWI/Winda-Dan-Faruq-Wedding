@@ -68,14 +68,46 @@
         rootElement.style.scrollBehavior = 'smooth';
         playaudio();
         smoothScroll('#hero1', 1000); // Ganti '#hero' dengan ID bagian undangan yang ingin digulirkan
-               $('#audioFrenata').on('ended', function() {
-        manageImageObjectsLevel();
-    }).get(0).play();
+        NS.modules.html5.audio = (function () {
+
+var _snd = false;
+
+function playAudio(src) {
+    if (!_snd)
+        _snd = new Audio();
+    else
+        $(_snd).empty();
+
+    for (var i = 0; i < src.length; i++) {
+        var source = document.createElement('source');
+        source.type = src[i].type;
+        source.src = src[i].src;
+        _snd.appendChild(source);
+    }
+
+    _snd.load(); // Needed on safari / idevice
+    _snd.play();
+};
+
+var playAudio = function () {
+    var src = [
+        { src: "/path/to/audio.wav", type: "audio/vnd.wave" },
+        { src: "/path/to/audio.ogg", type: "application/ogg; codecs=vorbis" },
+        { src: "audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3", type: "audio/mpeg" }
+    ];
+    playAudio(src);
+};
+
+return {
+    playAudio: playAudio,
+    // more play functions here
+};
+})();
     
     }
 </script>
 
-<audio loop="true" autoplay id="audioFrenata" controls="controls">
+<!-- <audio loop="true" autoplay id="audioFrenata" controls="controls"> -->
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
 </audio> 
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
