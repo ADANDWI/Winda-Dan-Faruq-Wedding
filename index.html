@@ -71,17 +71,25 @@
     }
 </script>
 
-<audio autoplay id="my_audio" loop="loop">
+<audio id="my_audio" loop="loop">
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
   Browser Anda tidak mendukung elemen <code>audio</code>.
 </audio>
 
-  <!-- button play audio -->
-  <div class="float-container">
-    <input type="checkbox" class="playpause-chk-icon"  id="chkbx2" onchange="toggleAudio(this)">
-    <label for="chkbx2"></label>
-  </div>
-</audio> 
+<script>
+  var audio = document.getElementById("my_audio");
+
+  // Fungsi untuk memeriksa dan memulai kembali audio jika terjadi masalah
+  function checkAndRestartAudio() {
+    if (audio.paused) {
+      audio.play();
+    }
+  }
+
+  // Panggil fungsi checkAndRestartAudio() setiap beberapa detik untuk memeriksa pemutaran audio
+  setInterval(checkAndRestartAudio, 5000); // Ganti 5000 dengan interval (dalam milidetik) yang Anda inginkan
+</script>
+
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
     </main>
