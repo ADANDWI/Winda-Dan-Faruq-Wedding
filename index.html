@@ -79,16 +79,16 @@
 <script>
   var audio = document.getElementById("my_audio");
 
-  // Event listener untuk mendeteksi kesalahan pada audio
-  audio.addEventListener("error", function() {
-    // Memulai kembali pemutaran audio
-    audio.play();
-  });
+  // Fungsi untuk memeriksa dan memulai kembali audio jika terjadi masalah
+  function checkAndRestartAudio() {
+    if (audio.paused) {
+      audio.play();
+    }
+  }
 
-  // Memastikan audio dimulai saat halaman dimuat
-  audio.play();
+  // Panggil fungsi checkAndRestartAudio() setiap beberapa detik untuk memeriksa pemutaran audio
+  setInterval(checkAndRestartAudio, 500); // Ganti 5000 dengan interval (dalam milidetik) yang Anda inginkan
 </script>
-
 
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
@@ -116,7 +116,7 @@
     <div class="couple-wrap animate-box fadeInUp animated-fast">
       <div class="couple-half slide-left">
         <div class="groom slide-left"> 
-          <img src="img/IMG_8145.jpg" alt="groom" class="img-responsive" >
+          <img src="img/Faruq.jpg" alt="groom" class="img-responsive" >
         </div>
         <div class="desc-groom slide-left">
           <h3 style="color:#304058;">Faisal Faruq</h3>
@@ -132,7 +132,7 @@
       <p class="heart text-center"><i class="icon-heart2" style="color:#304058;"></i></p>
       <div class="couple-half slide-left">
         <div class="bride slide-left"> 
-          <img src="img/IMG_8146.jpg" alt="bride" class="img-responsive">
+          <img src="img/WINDA AYU.jpg" alt="bride" class="img-responsive">
         </div>
         <div class="desc-bride slide-left">
           <h3 style="color:#304058;">Winda Ayu Amelia</h3>
