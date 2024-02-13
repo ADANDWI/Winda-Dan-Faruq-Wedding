@@ -435,7 +435,7 @@ body {
   background-image: url(img/BS\ \(197\ of\ 508\).jpg), linear-gradient(rgba(128, 4, 4, 0.5), rgba(128, 4, 4, 0.5)); /* Menambahkan background image dan gradient overlay */
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  
 }
 
 .info::after {
