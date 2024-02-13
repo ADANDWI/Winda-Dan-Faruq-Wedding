@@ -71,24 +71,45 @@
     }
 </script>
 
-<audio id="my_audio" loop="loop">
+<audio id="my_audio" loop>
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
   Browser Anda tidak mendukung elemen <code>audio</code>.
 </audio>
+<button id="audio-control-button" class="floating-button">
+  <i class="fa fa-play"></i>
+</button>
 
 <script>
-  var audio = document.getElementById("my_audio");
+// Mengambil elemen audio
+var audio = document.getElementById("my_audio");
 
-  // Fungsi untuk memeriksa dan memulai kembali audio jika terjadi masalah
-  function checkAndRestartAudio() {
-    if (audio.paused) {
-      audio.play();
-    }
+// Fungsi untuk mengontrol pemutaran musik
+function toggleAudio() {
+  if (audio.paused) {
+    audio.play();
+    audioControlButton.innerHTML = '<i class="fa fa-pause"></i>';
+  } else {
+    audio.pause();
+    audioControlButton.innerHTML = '<i class="fa fa-play"></i>';
   }
+}
 
-  // Panggil fungsi checkAndRestartAudio() setiap beberapa detik untuk memeriksa pemutaran audio
-  setInterval(checkAndRestartAudio, 500); // Ganti 5000 dengan interval (dalam milidetik) yang Anda inginkan
+// Menambahkan event listener ke tombol kontrol pemutaran musik
+var audioControlButton = document.getElementById("audio-control-button");
+audioControlButton.addEventListener("click", toggleAudio);
+
+// Fungsi untuk memperbarui posisi tombol kontrol saat digulir
+function updateButtonPosition() {
+  var rect = audioControlButton.getBoundingClientRect();
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  audioControlButton.style.bottom = rect.bottom - scrollTop + "px";
+}
+
+// Menjalankan fungsi updateButtonPosition saat halaman dimuat dan digulir
+window.addEventListener("DOMContentLoaded", updateButtonPosition);
+window.addEventListener("scroll", updateButtonPosition);
 </script>
+
 
   <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
     <main>
