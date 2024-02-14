@@ -75,13 +75,18 @@
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
   Browser Anda tidak mendukung elemen <code>audio</code>.
 </audio>
+
 <script>
-// Panggil fungsi play pada elemen audio saat halaman dimuat
-window.addEventListener("DOMContentLoaded", function() {
+// Panggil fungsi play pada elemen audio saat tombol "Lihat Undangan" diklik
+document.addEventListener("DOMContentLoaded", function() {
     var audio = document.getElementById("my_audio");
-    audio.play();
+    var button = document.querySelector('.btn');
+    button.addEventListener('click', function() {
+      audio.play();
+    });
 });
 </script>
+
 
 
 
@@ -277,7 +282,7 @@ window.addEventListener("DOMContentLoaded", function() {
         <img src="img/BS (255 of 318).jpg" alt="Image 3"  >
       </div>
       <div class="gallery-video13">
-        <video controls autoplay muted>
+        <video autoplay muted>
           <source src="video/WhatsApp Video 2024-02-05 at 18.46.43(2).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
