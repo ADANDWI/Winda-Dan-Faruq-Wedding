@@ -26,6 +26,9 @@
 </head>
 
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white">
     <main>
         <h4>Kepada Yth: <span>Bapak/Ibu/Saudara/i,</span></h4>
@@ -34,9 +37,9 @@
         <!-- <div class="simply-countdown"></div> -->
         <a href="#hero1" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
     </main>
-</section>
+  </section>
 
-<script>
+  <script>
     function enableScroll() {
         function smoothScroll(target, duration) {
             var targetElement = document.querySelector(target);
@@ -61,15 +64,23 @@
             }
 
             requestAnimationFrame(animation);
+
+            // Setelah tombol diklik, ubah overflow menjadi auto untuk memungkinkan pengguliran
+            document.documentElement.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
+            document.body.classList.add('scrollable');
         }
 
         var rootElement = document.documentElement;
         window.onscroll = function() {};
         rootElement.style.scrollBehavior = 'smooth';
         smoothScroll('#hero1', 1000); // Ganti '#hero' dengan ID bagian undangan yang ingin digulirkan
-    
     }
-</script>
+  </script>
+
+</body>
+</html>
+
 
 <audio id="my_audio" loop>
   <source src="audio/Tiara Andini, Arsy Widianto - Cintanya Aku (Official Music Video)(2)(1).mp3" type="audio/mpeg">
@@ -90,19 +101,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-  <div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
-    <main>
-    </main>
-    <!-- Tambahkan lingkaran di sini -->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="text-bottom-right" style="margin-bottom: 20px;">
-      <h2 style="font-size: 35px;" style="margin-bottom: 10px;">THE WEDDING OF</h2>
-      <h1 style="font-size: 25px;">Faisa Faruq</h1>
-      <h1 style="font-size: 25px;">Winda Ayu Amelia</h1>
-      <p>16 APRIL 2024</p>
-    </div>
+<div class="hero1 w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white slide-left" id="hero1">
+  <main>
+  </main>
+<div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+</div >
+  <div class="text-bottom-right" style="margin-bottom: 20px;">
+    <h2 style="font-size: 35px; margin-bottom: 10px;">THE WEDDING OF</h2>
+    <h1 style="font-size: 25px;">Faisa Faruq</h1>
+    <h1 style="font-size: 25px;">Winda Ayu Amelia</h1>
+    <p>16 APRIL 2024</p>
   </div>
+</div>
+
   
 <div id="fh5co-couple">
   <div class="container">

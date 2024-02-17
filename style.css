@@ -14,7 +14,13 @@ body {
   min-height: 4000px;
   /* background-color: rgba(106, 8, 8, 0.582); */
 }
-
+html, body {
+  overflow: hidden; /* Mulai dengan mengatur overflow menjadi hidden */
+}
+.scrollable {
+  overflow: auto; /* Tambahkan kelas CSS untuk membuat konten menjadi dapat digulir */
+  height: 100%; /* Pastikan tinggi konten tetap 100% dari tinggi layar */
+}
 .hero {
   position: relative;
   min-height: 100vh;
@@ -31,22 +37,7 @@ body {
   background-size: cover;
   background-position: center;
   z-index: -1;
-  animation: slideshow 75s infinite; /* Atur kecepatan dan looping slideshow di sini */
-}
-
-@keyframes slideshow {
-  0% {
-    background-image: url('img/BS (323 of 508).jpg') ;
-  }
-  25% {
-    background-image: url('img/BS (442 of 508).jpg');
-  }
-  50% {
-    background-image: url('img/BS (246 of 508).jpg');
-  }
-  100% {
-    background-image: url('img/BS (323 of 508).jpg'); /* Kembali ke gambar awal untuk efek looping */
-  }
+  background-image: url(img/BS\ \(323\ of\ 508\).jpg);
 }
 
 
@@ -120,49 +111,152 @@ body {
   z-index: -1;
 }
 
-/* Animasi lingkaran */
-@keyframes animateCircle {
-  0% {
-    transform: translateY(100%); /* Memulai dari bawah */
-  }
-  100% {
-    transform: translateY(-100%); /* Berakhir di atas */
-  }
-}
-
-/* Definisi gaya untuk lingkaran */
-.circle {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  animation: animateCircle 10s linear infinite; /* Animasi pergerakan lingkaran */
-}
-
-/* Gaya untuk setiap lingkaran */
-.circle:nth-child(1) {
-  top: 110%; /* Muncul di bawah area hero */
-  left: 10%; /* Posisi horizontal lingkaran */
-}
-
-.circle:nth-child(2) {
-  top: 120%;
-  left: 40%;
-}
-
-.circle:nth-child(3) {
-  top: 130%;
-  left: 70%;
-}
-
-/* Tambahkan lebih banyak lingkaran sesuai kebutuhan */
-
-
 .hero1 {
   position: relative;
   min-height: 100vh;
 }
+
+
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: #ffffff transparent;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
 
 
 .hero1 h4,
@@ -327,12 +421,21 @@ body {
 
 .couple-half .groom img,
 .couple-half .bride img {
-  width: 250px; /* Mengatur lebar gambar responsif */
-  height: auto; /* Menjaga rasio aspek */
-  display: block; /* Menghilangkan ruang putih di sekitar gambar */
-  margin: 0 auto 10px; /* Memberi jarak ke bawah */
+  width: 280px; /* Menambahkan sedikit lebar */
+  height: 320px; /* Menambahkan sedikit tinggi */
+  display: block;
+  margin: 0 auto 20px; /* Menambahkan sedikit jarak ke bawah */
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .couple-half .groom img,
+  .couple-half .bride img {
+    width: 220px; /* Menyesuaikan lebar untuk layar medium */
+    height: 250px; /* Menyesuaikan tinggi untuk layar medium */
+    margin: 0 auto 15px; /* Menambahkan sedikit jarak ke bawah untuk layar medium */
+  }
 }
 
 @media screen and (max-width: 480px) {
