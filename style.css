@@ -422,8 +422,8 @@ html, body {
 
 .couple-half .groom img,
 .couple-half .bride img {
-  width: 280px; /* Menambahkan sedikit lebar */
-  height: 320px; /* Menambahkan sedikit tinggi */
+  width: 300px; /* Menambahkan sedikit lebar */
+  height: 350px; /* Menambahkan sedikit tinggi */
   display: block;
   margin: 0 auto 20px; /* Menambahkan sedikit jarak ke bawah */
   border-top-left-radius: 50%;
@@ -449,8 +449,8 @@ html, body {
 
   .couple-half .groom img,
   .couple-half .bride img {
-    width: 200px; /* Lebar gambar responsif pada layar kecil */
-    height: 230px; /* Tinggi gambar responsif pada layar kecil */
+    width: 250px; /* Lebar gambar responsif pada layar kecil */
+    height: 340px; /* Tinggi gambar responsif pada layar kecil */
     margin: 0 auto 0px; /* Memberi jarak ke bawah */
   }
 }
@@ -468,7 +468,7 @@ html, body {
 .couple-half .desc-groom {
   padding-right: 180px;
   text-align: right;
-  margin-top: 75%;
+  margin-top: 95%;
 }
 
 .couple-half .desc-bride {
@@ -476,7 +476,7 @@ html, body {
   text-align: left;
   margin-top: 60%;
   margin-bottom: 27%;
-  margin-top: 75%;
+  margin-top: 95%;
 }
 
 @media screen and (max-width: 480px) {
@@ -1198,7 +1198,7 @@ audio {
 .gallery12::before {
   content: ''; /* Membuat lapisan atas */
   position: absolute;
-  top: -20px; /* Menggeser ke atas */
+  top: -20px; /* Menggeser ke atas *
   left: -20px; /* Menggeser ke kiri */
   right: -20px; /* Menggeser ke kanan */
   height: 50%; /* Tinggi lapisan atas */
