@@ -300,21 +300,29 @@ document.addEventListener("DOMContentLoaded", function() {
         <img src="img/BS (299 of 318).jpg" alt="Image 2"  >
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (255 of 318).jpg" alt="Image 3"  >
+        <img control src="img/BS (255 of 318).jpg" alt="Image 3"  >
       </div>
       <div class="gallery-video13">
-        <video control autoplay muted>
-          <source src="video/WhatsApp Video 2024-02-05 at 18.46.43(2).mp4" type="video/mp4">
-          Your browser does not support the video tag.
+        <video id="myVideo" controls autoplay muted>
+            <source src="video/WhatsApp Video 2024-02-05 at 18.46.43(2).mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-      </div>
-      <script>
+    </div>
+    
+    <script>
+        // Perbarui id dari elemen video ke "myVideo"
         function restartVideo() {
-          var video = document.getElementById("myVideo");
-          video.currentTime = 0;
-          video.play();
+            var video = document.getElementById("myVideo");
+            video.currentTime = 0;
+            video.play();
         }
-        </script>   
+        
+        // Panggil fungsi restartVideo saat halaman dimuat
+        window.onload = function() {
+            restartVideo();
+        };
+    </script>
+    
       <div class="gallery-image13 slide-left">
         <img src="img/BS (79 of 508).jpg" alt="Image 4"width="100%" >
       </div>
