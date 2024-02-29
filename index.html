@@ -293,14 +293,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <section class="gallery12 slide-left">
   <h2>Our Gallery</h2>
   <div class="gallery-images12">
-      <div class="gallery-image13 slide-left">
-          <img src="img/BS (291 of 318).jpg" alt="Image 1" width="100%" onclick="openFullscreen(this)">
+      <div class="gallery-image13 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (291 of 318).jpg" alt="Image 1" width="100%">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (299 of 318).jpg" alt="Image 2" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (299 of 318).jpg" alt="Image 2">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (255 of 318).jpg" alt="Image 3" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (255 of 318).jpg" alt="Image 3">
       </div>
       <!-- Gallery video -->
       <div class="gallery-video13">
@@ -310,30 +310,30 @@ document.addEventListener("DOMContentLoaded", function() {
           </video>
       </div>
       <script>
-        function restartVideo() {
-          var video = document.getElementById("myVideo");
-          video.currentTime = 1;
-          video.play();
-        }
-        </script>   
+        function playVideo() {
+        var video = document.getElementById("myVideo");
+        video.style.display = "block"; // Tampilkan video jika tidak terlihat
+        video.play(); // Mulai pemutaran video
+    }
+        </script>
       <!-- Daftar gambar lainnya -->
-      <div class="gallery-image13 slide-left">
-          <img src="img/BS (79 of 508).jpg" alt="Image 4" width="100%" onclick="openFullscreen(this)">
+      <div class="gallery-image13 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (79 of 508).jpg" alt="Image 4" width="100%">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (85 of 508).jpg" alt="Image 5" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (85 of 508).jpg" alt="Image 5">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (141 of 508).jpg" alt="Image 6" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (141 of 508).jpg" alt="Image 6">
       </div>
-      <div class="gallery-image13 slide-left">
-          <img src="img/BS (323 of 508).jpg" alt="Image 7" width="100%" onclick="openFullscreen(this)">
+      <div class="gallery-image13 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (323 of 508).jpg" alt="Image 7" width="100%">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (451 of 508).jpg" alt="Image 8" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (451 of 508).jpg" alt="Image 8">
       </div>
-      <div class="gallery-image12 slide-left">
-          <img src="img/BS (283 of 508).jpg" alt="Image 9" onclick="openFullscreen(this)">
+      <div class="gallery-image12 slide-left" ontouchstart="openFullscreen(this)" onclick="openFullscreen(this)">
+          <img src="img/BS (283 of 508).jpg" alt="Image 9">
       </div>
   </div>
 </section>
@@ -352,6 +352,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   }
 </script>
+
 
 <div class="card-box">
   <div class="heroo">
