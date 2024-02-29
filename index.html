@@ -290,59 +290,69 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
   </div>
 </section>
-  <section class="gallery12 slide-left">
-    <h2>Our Gallery</h2>
-    <div class="gallery-images12 ">
+<section class="gallery12 slide-left">
+  <h2>Our Gallery</h2>
+  <div class="gallery-images12">
       <div class="gallery-image13 slide-left">
-        <img src="img/BS (291 of 318).jpg" alt="Image 1" width="100%">
+          <img src="img/BS (291 of 318).jpg" alt="Image 1" width="100%" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (299 of 318).jpg" alt="Image 2"  >
+          <img src="img/BS (299 of 318).jpg" alt="Image 2" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img control src="img/BS (255 of 318).jpg" alt="Image 3"  >
+          <img src="img/BS (255 of 318).jpg" alt="Image 3" onclick="openFullscreen(this)">
       </div>
+      <!-- Gallery video -->
       <div class="gallery-video13">
-        <video id="myVideo" controls autoplay muted>
-            <source src="video/WhatsApp Video 2024-02-05 at 18.46.43(2).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    
-    <script>
-        // Perbarui id dari elemen video ke "myVideo"
+          <video controls autoplay muted>
+              <source src="video/WhatsApp Video 2024-02-05 at 18.46.43(2).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+      </div>
+      <script>
         function restartVideo() {
-            var video = document.getElementById("myVideo");
-            video.currentTime = 0;
-            video.play();
+          var video = document.getElementById("myVideo");
+          video.currentTime = 1;
+          video.play();
         }
-        
-        // Panggil fungsi restartVideo saat halaman dimuat
-        window.onload = function() {
-            restartVideo();
-        };
-    </script>
-    
+        </script>   
+      <!-- Daftar gambar lainnya -->
       <div class="gallery-image13 slide-left">
-        <img src="img/BS (79 of 508).jpg" alt="Image 4"width="100%" >
+          <img src="img/BS (79 of 508).jpg" alt="Image 4" width="100%" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (85 of 508).jpg" alt="Image 5">
+          <img src="img/BS (85 of 508).jpg" alt="Image 5" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (141 of 508).jpg" alt="Image 6">
+          <img src="img/BS (141 of 508).jpg" alt="Image 6" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image13 slide-left">
-        <img src="img/BS (323 of 508).jpg" alt="Image 7" width="100%">
+          <img src="img/BS (323 of 508).jpg" alt="Image 7" width="100%" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (451 of 508).jpg" alt="Image 8" >
+          <img src="img/BS (451 of 508).jpg" alt="Image 8" onclick="openFullscreen(this)">
       </div>
       <div class="gallery-image12 slide-left">
-        <img src="img/BS (283 of 508).jpg" alt="Image 9">
+          <img src="img/BS (283 of 508).jpg" alt="Image 9" onclick="openFullscreen(this)">
       </div>
-    </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  // Fungsi untuk membuka gambar dalam mode layar penuh
+  function openFullscreen(element) {
+      if (element.requestFullscreen) {
+          element.requestFullscreen();
+      } else if (element.mozRequestFullScreen) { /* Firefox */
+          element.mozRequestFullScreen();
+      } else if (element.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+          element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { /* IE/Edge */
+          element.msRequestFullscreen();
+      }
+  }
+</script>
+
 <div class="card-box">
   <div class="heroo">
     <h1>FILTER WEDDING</h1>
